@@ -1,7 +1,20 @@
 .container {
-  margin: 100px auto;
+  margin: 20px auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.usage {
+  display: flex;
+  padding: 5px;
+  &-detail {
+    margin-right: 10px;
+  }
+}
+
+h3 {
+  text-align: center;
 }
