@@ -1,19 +1,8 @@
-import { getAllCountries } from "../services/get-countries";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "./Card";
 import "../styles/list.scss";
 
-const List = () => {
-  const [allData, setAllData] = useState(null);
-
-  const setData = async () => {
-    const result = await getAllCountries().then((res) => res.data);
-    return setAllData(result);
-  };
-  useEffect(() => {
-    setData();
-  }, []);
-
+const List = ({ allData }) => {
   return (
     <div className="list">
       {allData
